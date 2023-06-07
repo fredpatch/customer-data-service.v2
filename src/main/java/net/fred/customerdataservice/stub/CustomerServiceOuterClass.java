@@ -3108,6 +3108,1956 @@ public final class CustomerServiceOuterClass {
 
   }
 
+  public interface SaveCustomerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SaveCustomerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     * @return Whether the customer field is set.
+     */
+    boolean hasCustomer();
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     * @return The customer.
+     */
+    net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getCustomer();
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     */
+    net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder getCustomerOrBuilder();
+  }
+  /**
+   * Protobuf type {@code SaveCustomerRequest}
+   */
+  public  static final class SaveCustomerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SaveCustomerRequest)
+      SaveCustomerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SaveCustomerRequest.newBuilder() to construct.
+    private SaveCustomerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SaveCustomerRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SaveCustomerRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SaveCustomerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder subBuilder = null;
+              if (customer_ != null) {
+                subBuilder = customer_.toBuilder();
+              }
+              customer_ = input.readMessage(net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(customer_);
+                customer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.Builder.class);
+    }
+
+    public static final int CUSTOMER_FIELD_NUMBER = 1;
+    private net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest customer_;
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     * @return Whether the customer field is set.
+     */
+    public boolean hasCustomer() {
+      return customer_ != null;
+    }
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     * @return The customer.
+     */
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getCustomer() {
+      return customer_ == null ? net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.getDefaultInstance() : customer_;
+    }
+    /**
+     * <code>.CustomerRequest customer = 1;</code>
+     */
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder getCustomerOrBuilder() {
+      return getCustomer();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (customer_ != null) {
+        output.writeMessage(1, getCustomer());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (customer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCustomer());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest)) {
+        return super.equals(obj);
+      }
+      net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest other = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest) obj;
+
+      if (hasCustomer() != other.hasCustomer()) return false;
+      if (hasCustomer()) {
+        if (!getCustomer()
+            .equals(other.getCustomer())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCustomer()) {
+        hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomer().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SaveCustomerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SaveCustomerRequest)
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.Builder.class);
+      }
+
+      // Construct using net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (customerBuilder_ == null) {
+          customer_ = null;
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest getDefaultInstanceForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest build() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest buildPartial() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest result = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest(this);
+        if (customerBuilder_ == null) {
+          result.customer_ = customer_;
+        } else {
+          result.customer_ = customerBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest) {
+          return mergeFrom((net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest other) {
+        if (other == net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.getDefaultInstance()) return this;
+        if (other.hasCustomer()) {
+          mergeCustomer(other.getCustomer());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest customer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder> customerBuilder_;
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       * @return Whether the customer field is set.
+       */
+      public boolean hasCustomer() {
+        return customerBuilder_ != null || customer_ != null;
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       * @return The customer.
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getCustomer() {
+        if (customerBuilder_ == null) {
+          return customer_ == null ? net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.getDefaultInstance() : customer_;
+        } else {
+          return customerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public Builder setCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest value) {
+        if (customerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customer_ = value;
+          onChanged();
+        } else {
+          customerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public Builder setCustomer(
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder builderForValue) {
+        if (customerBuilder_ == null) {
+          customer_ = builderForValue.build();
+          onChanged();
+        } else {
+          customerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public Builder mergeCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest value) {
+        if (customerBuilder_ == null) {
+          if (customer_ != null) {
+            customer_ =
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.newBuilder(customer_).mergeFrom(value).buildPartial();
+          } else {
+            customer_ = value;
+          }
+          onChanged();
+        } else {
+          customerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public Builder clearCustomer() {
+        if (customerBuilder_ == null) {
+          customer_ = null;
+          onChanged();
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder getCustomerBuilder() {
+        
+        onChanged();
+        return getCustomerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder getCustomerOrBuilder() {
+        if (customerBuilder_ != null) {
+          return customerBuilder_.getMessageOrBuilder();
+        } else {
+          return customer_ == null ?
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.getDefaultInstance() : customer_;
+        }
+      }
+      /**
+       * <code>.CustomerRequest customer = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder> 
+          getCustomerFieldBuilder() {
+        if (customerBuilder_ == null) {
+          customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder>(
+                  getCustomer(),
+                  getParentForChildren(),
+                  isClean());
+          customer_ = null;
+        }
+        return customerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SaveCustomerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:SaveCustomerRequest)
+    private static final net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest();
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SaveCustomerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SaveCustomerRequest>() {
+      @java.lang.Override
+      public SaveCustomerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SaveCustomerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SaveCustomerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SaveCustomerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SaveCustomerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SaveCustomerResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Customer customer = 1;</code>
+     * @return Whether the customer field is set.
+     */
+    boolean hasCustomer();
+    /**
+     * <code>.Customer customer = 1;</code>
+     * @return The customer.
+     */
+    net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer getCustomer();
+    /**
+     * <code>.Customer customer = 1;</code>
+     */
+    net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder getCustomerOrBuilder();
+  }
+  /**
+   * Protobuf type {@code SaveCustomerResponse}
+   */
+  public  static final class SaveCustomerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SaveCustomerResponse)
+      SaveCustomerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SaveCustomerResponse.newBuilder() to construct.
+    private SaveCustomerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SaveCustomerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SaveCustomerResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SaveCustomerResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder subBuilder = null;
+              if (customer_ != null) {
+                subBuilder = customer_.toBuilder();
+              }
+              customer_ = input.readMessage(net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(customer_);
+                customer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.Builder.class);
+    }
+
+    public static final int CUSTOMER_FIELD_NUMBER = 1;
+    private net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer customer_;
+    /**
+     * <code>.Customer customer = 1;</code>
+     * @return Whether the customer field is set.
+     */
+    public boolean hasCustomer() {
+      return customer_ != null;
+    }
+    /**
+     * <code>.Customer customer = 1;</code>
+     * @return The customer.
+     */
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer getCustomer() {
+      return customer_ == null ? net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.getDefaultInstance() : customer_;
+    }
+    /**
+     * <code>.Customer customer = 1;</code>
+     */
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder getCustomerOrBuilder() {
+      return getCustomer();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (customer_ != null) {
+        output.writeMessage(1, getCustomer());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (customer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCustomer());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse)) {
+        return super.equals(obj);
+      }
+      net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse other = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse) obj;
+
+      if (hasCustomer() != other.hasCustomer()) return false;
+      if (hasCustomer()) {
+        if (!getCustomer()
+            .equals(other.getCustomer())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCustomer()) {
+        hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomer().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SaveCustomerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SaveCustomerResponse)
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.Builder.class);
+      }
+
+      // Construct using net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (customerBuilder_ == null) {
+          customer_ = null;
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_SaveCustomerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse getDefaultInstanceForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse build() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse buildPartial() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse result = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse(this);
+        if (customerBuilder_ == null) {
+          result.customer_ = customer_;
+        } else {
+          result.customer_ = customerBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse) {
+          return mergeFrom((net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse other) {
+        if (other == net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.getDefaultInstance()) return this;
+        if (other.hasCustomer()) {
+          mergeCustomer(other.getCustomer());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer customer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer, net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder> customerBuilder_;
+      /**
+       * <code>.Customer customer = 1;</code>
+       * @return Whether the customer field is set.
+       */
+      public boolean hasCustomer() {
+        return customerBuilder_ != null || customer_ != null;
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       * @return The customer.
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer getCustomer() {
+        if (customerBuilder_ == null) {
+          return customer_ == null ? net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.getDefaultInstance() : customer_;
+        } else {
+          return customerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public Builder setCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer value) {
+        if (customerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customer_ = value;
+          onChanged();
+        } else {
+          customerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public Builder setCustomer(
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder builderForValue) {
+        if (customerBuilder_ == null) {
+          customer_ = builderForValue.build();
+          onChanged();
+        } else {
+          customerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public Builder mergeCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer value) {
+        if (customerBuilder_ == null) {
+          if (customer_ != null) {
+            customer_ =
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
+          } else {
+            customer_ = value;
+          }
+          onChanged();
+        } else {
+          customerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public Builder clearCustomer() {
+        if (customerBuilder_ == null) {
+          customer_ = null;
+          onChanged();
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder getCustomerBuilder() {
+        
+        onChanged();
+        return getCustomerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder getCustomerOrBuilder() {
+        if (customerBuilder_ != null) {
+          return customerBuilder_.getMessageOrBuilder();
+        } else {
+          return customer_ == null ?
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.getDefaultInstance() : customer_;
+        }
+      }
+      /**
+       * <code>.Customer customer = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer, net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder> 
+          getCustomerFieldBuilder() {
+        if (customerBuilder_ == null) {
+          customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer, net.fred.customerdataservice.stub.CustomerServiceOuterClass.Customer.Builder, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerOrBuilder>(
+                  getCustomer(),
+                  getParentForChildren(),
+                  isClean());
+          customer_ = null;
+        }
+        return customerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SaveCustomerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:SaveCustomerResponse)
+    private static final net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse();
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SaveCustomerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SaveCustomerResponse>() {
+      @java.lang.Override
+      public SaveCustomerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SaveCustomerResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SaveCustomerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SaveCustomerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CustomerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CustomerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string email = 2;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 2;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code CustomerRequest}
+   */
+  public  static final class CustomerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CustomerRequest)
+      CustomerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CustomerRequest.newBuilder() to construct.
+    private CustomerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CustomerRequest() {
+      name_ = "";
+      email_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CustomerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_CustomerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_CustomerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 2;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 2;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, email_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, email_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest)) {
+        return super.equals(obj);
+      }
+      net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest other = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CustomerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CustomerRequest)
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_CustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_CustomerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.class, net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.Builder.class);
+      }
+
+      // Construct using net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        email_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.internal_static_CustomerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getDefaultInstanceForType() {
+        return net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest build() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest buildPartial() {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest result = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest(this);
+        result.name_ = name_;
+        result.email_ = email_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest) {
+          return mergeFrom((net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest other) {
+        if (other == net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 2;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CustomerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:CustomerRequest)
+    private static final net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest();
+    }
+
+    public static net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CustomerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CustomerRequest>() {
+      @java.lang.Override
+      public CustomerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CustomerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CustomerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CustomerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.CustomerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GetAllCustomersRequest_descriptor;
   private static final 
@@ -3133,6 +5083,21 @@ public final class CustomerServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetCustomersByIdResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SaveCustomerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SaveCustomerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SaveCustomerResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SaveCustomerResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CustomerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CustomerRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3148,12 +5113,18 @@ public final class CustomerServiceOuterClass {
       "d\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\"-\n\027" +
       "GetCustomersByIdRequest\022\022\n\ncustomerId\030\001 " +
       "\001(\003\"7\n\030GetCustomersByIdResponse\022\033\n\010custo" +
-      "mer\030\001 \001(\0132\t.Customer2\234\001\n\017CustomerService" +
+      "mer\030\001 \001(\0132\t.Customer\"9\n\023SaveCustomerRequ" +
+      "est\022\"\n\010customer\030\001 \001(\0132\020.CustomerRequest\"" +
+      "3\n\024SaveCustomerResponse\022\033\n\010customer\030\001 \001(" +
+      "\0132\t.Customer\".\n\017CustomerRequest\022\014\n\004name\030" +
+      "\001 \001(\t\022\r\n\005email\030\002 \001(\t2\331\001\n\017CustomerService" +
       "\022A\n\017GetAllCustomers\022\027.GetAllCustomersReq" +
       "uest\032\025.GetCustomersResponse\022F\n\017GetCustom" +
       "erById\022\030.GetCustomersByIdRequest\032\031.GetCu" +
-      "stomersByIdResponseB#\n!net.fred.customer" +
-      "dataservice.stubb\006proto3"
+      "stomersByIdResponse\022;\n\014SaveCustomer\022\024.Sa" +
+      "veCustomerRequest\032\025.SaveCustomerResponse" +
+      "B#\n!net.fred.customerdataservice.stubb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3189,6 +5160,24 @@ public final class CustomerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetCustomersByIdResponse_descriptor,
         new java.lang.String[] { "Customer", });
+    internal_static_SaveCustomerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_SaveCustomerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SaveCustomerRequest_descriptor,
+        new java.lang.String[] { "Customer", });
+    internal_static_SaveCustomerResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_SaveCustomerResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SaveCustomerResponse_descriptor,
+        new java.lang.String[] { "Customer", });
+    internal_static_CustomerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CustomerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CustomerRequest_descriptor,
+        new java.lang.String[] { "Name", "Email", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

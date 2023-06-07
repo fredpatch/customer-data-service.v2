@@ -1,6 +1,5 @@
 package net.fred.customerdataservice.stub;
 
-import javax.annotation.Generated;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
@@ -92,6 +91,38 @@ public final class CustomerServiceGrpc {
      return getGetCustomerByIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest,
+      net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> getSaveCustomerMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SaveCustomer",
+      requestType = net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.class,
+      responseType = net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest,
+      net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> getSaveCustomerMethod() {
+    io.grpc.MethodDescriptor<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> getSaveCustomerMethod;
+    if ((getSaveCustomerMethod = CustomerServiceGrpc.getSaveCustomerMethod) == null) {
+      synchronized (CustomerServiceGrpc.class) {
+        if ((getSaveCustomerMethod = CustomerServiceGrpc.getSaveCustomerMethod) == null) {
+          CustomerServiceGrpc.getSaveCustomerMethod = getSaveCustomerMethod = 
+              io.grpc.MethodDescriptor.<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest, net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "CustomerService", "SaveCustomer"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CustomerServiceMethodDescriptorSupplier("SaveCustomer"))
+                  .build();
+          }
+        }
+     }
+     return getSaveCustomerMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -133,6 +164,13 @@ public final class CustomerServiceGrpc {
       asyncUnimplementedUnaryCall(getGetCustomerByIdMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void saveCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest request,
+        io.grpc.stub.StreamObserver<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getSaveCustomerMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -149,6 +187,13 @@ public final class CustomerServiceGrpc {
                 net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdRequest,
                 net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdResponse>(
                   this, METHODID_GET_CUSTOMER_BY_ID)))
+          .addMethod(
+            getSaveCustomerMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest,
+                net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse>(
+                  this, METHODID_SAVE_CUSTOMER)))
           .build();
     }
   }
@@ -186,6 +231,14 @@ public final class CustomerServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetCustomerByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void saveCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest request,
+        io.grpc.stub.StreamObserver<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSaveCustomerMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -218,6 +271,13 @@ public final class CustomerServiceGrpc {
     public net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdResponse getCustomerById(net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetCustomerByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse saveCustomer(net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSaveCustomerMethod(), getCallOptions(), request);
     }
   }
 
@@ -254,10 +314,19 @@ public final class CustomerServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetCustomerByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse> saveCustomer(
+        net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSaveCustomerMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ALL_CUSTOMERS = 0;
   private static final int METHODID_GET_CUSTOMER_BY_ID = 1;
+  private static final int METHODID_SAVE_CUSTOMER = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -283,6 +352,10 @@ public final class CustomerServiceGrpc {
         case METHODID_GET_CUSTOMER_BY_ID:
           serviceImpl.getCustomerById((net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdRequest) request,
               (io.grpc.stub.StreamObserver<net.fred.customerdataservice.stub.CustomerServiceOuterClass.GetCustomersByIdResponse>) responseObserver);
+          break;
+        case METHODID_SAVE_CUSTOMER:
+          serviceImpl.saveCustomer((net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerRequest) request,
+              (io.grpc.stub.StreamObserver<net.fred.customerdataservice.stub.CustomerServiceOuterClass.SaveCustomerResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -347,6 +420,7 @@ public final class CustomerServiceGrpc {
               .setSchemaDescriptor(new CustomerServiceFileDescriptorSupplier())
               .addMethod(getGetAllCustomersMethod())
               .addMethod(getGetCustomerByIdMethod())
+              .addMethod(getSaveCustomerMethod())
               .build();
         }
       }
